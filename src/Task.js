@@ -1,35 +1,31 @@
 import './Task.css';
+
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const Tasks = (props) => {
-    const handleEdit = (e) => {
-
-    }
-
-    const handleDelete = (e) => {
-        // e.preventDefault();
-        // console.log(e.target.value)
-        console.log(e)
-        // props.setTasks(props.tasks.filter(i => i != e.target.value));
+    const handleDelete = (value) => {
+        console.log(value);
+        let filteredArr = props.tasks.filter((t) => t.value !== value);
+        props.setTasks(filteredArr);
     }
 
     return (
         <div className='task-list'>
             {
-                props.tasks.map(
-                    task =>
-                        <div className='task' key={task.id}>
+                props.tasks.map(task => (
+                    <div className='task'>
 
-                            <h6>{task.value}</h6>
-                            <div className='controls'>
-                                <button onClick={handleEdit}><EditIcon /></button>
-                                <button value={task.id} onClick={handleDelete}><DeleteIcon /></button>
-                            </div>
+                        <h6>{task.value}</h6>
+
+                        <div className='controls'>
+                            <button className="edit-button" type="button"><EditIcon /></button>
+                            <button className="delete-button" type="button" onClick={() => handleDelete(task.value)} ><DeleteIcon /></button>
                         </div>
-                )
+                    </div>
+                ))
             }
-        </div >
+        </div>
     );
 };
 

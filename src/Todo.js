@@ -5,15 +5,17 @@ import './Todo.css';
 const Todo = () => {
     const [index, setIndex] = useState(0);
     const [tasks, setTasks] = useState([])
-    const [userInput, setUserInput] = useState();
+    const [userInput, setUserInput] = useState("");
     const handleAddTask = (event) => {
-
-        event.preventDefault();
-        setTasks([...tasks, { id: index, value: userInput }]);
-        setIndex(index + 1);
-        console.log(index)
-        setUserInput("");
-        console.log(userInput);
+        if (userInput === "")
+            alert("Add non empty task");
+        else {
+            event.preventDefault();
+            setTasks([...tasks, { id: index, value: userInput }]);
+            setIndex(index + 1);
+            console.log(userInput)
+            setUserInput("");
+        }
     }
     const handleChange = (e) => {
 
