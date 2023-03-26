@@ -19,8 +19,8 @@ const Tasks = (props) => {
                         <h6>{task.value}</h6>
 
                         <div className='controls'>
-                            <button className="edit-button" type="button"><EditIcon /></button>
-                            <button className="delete-button" type="button" onClick={() => handleDelete(task.value)} ><DeleteIcon /></button>
+                            {/* <button className="edit-button" type="button"><EditIcon sx={{ color: 'blue' }}/></button> */}
+                            <button className="delete-button" type="button" onClick={() => handleDelete(task.value)} ><DeleteIcon sx={{ color: 'crimson', backgroundColor: 'white' }} /></button>
                         </div>
                     </div>
                 ))

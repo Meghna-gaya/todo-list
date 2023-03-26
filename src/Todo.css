@@ -29,15 +29,18 @@ form {
     justify-content: space-between;
     width: 60%;
     padding: 15px;
-    border: 1px black solid;
+
 }
 
 form input {
     width: 80%;
     border: none;
+    border: 1.5px grey solid;
+    line-height: 33px;
 }
 
 .add-button {
+    width: max-content;
     height: 100%;
     border: none;
     border-radius: 5%;
@@ -45,7 +48,7 @@ form input {
     color: white;
     background-color: #0d75ec;
     border-radius: 10%;
-    padding: 2%;
+    padding: 3%;
 }
 
 .task {
