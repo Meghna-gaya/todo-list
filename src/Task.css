@@ -5,12 +5,8 @@
     width: 58%;
     padding: 2%;
 }
-
-.delete-button,
-.edit-button {
-
+.delete-button, .edit-button, .done-button {
     border: none;
-    /* color: white; */
     color: #0d75ec;
     border-radius: 10%;
     width: fit-content;
@@ -19,24 +15,25 @@
     color: white;
     background-color: white;
 }
-
 .task {
     width: 100%;
     border: 1px solid grey;
     margin-bottom: 2%;
     align-items: center;
 }
-
 .controls {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
-
 h6 {
     margin: 0%;
     margin-left: 2%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.task-list input {
+    margin: 2%;
+    line-height: 12px;
 }

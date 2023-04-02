@@ -13,12 +13,10 @@ const Todo = () => {
             event.preventDefault();
             setTasks([...tasks, { id: index, value: userInput }]);
             setIndex(index + 1);
-            console.log(userInput)
             setUserInput("");
         }
     }
     const handleChange = (e) => {
-
         setUserInput(e.currentTarget.value);
     }
 
